@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/colorWhite">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <RelativeLayout android:id="@+id/rel_infos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="0dp"
+            android:layout_gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/scan_img"
+                android:layout_width="match_parent"
+                android:layout_height="340dp"
+                android:src="@drawable/qr_code"
+                android:layout_centerVertical="false"
+                android:layout_centerHorizontal="true"
+                android:paddingTop="25dp"
+                android:paddingBottom="25dp"
+                android:layout_margin="10dp"
+                android:visibility="visible"
+                android:elevation="8dp"/>
+
+            <RelativeLayout android:id="@+id/layoutqrcode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="false"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:elevation="8dp"
+                android:visibility="invisible">
+
+                <com.dlazaro66.qrcodereaderview.QRCodeReaderView
+                    android:id="@+id/qrdecoderviewpaye"
+                    android:layout_width="match_parent"
+                    android:layout_height="340dp"
+                    android:visibility="visible"/>
+
+                <info.androidhive.barcode.ScannerOverlay
+                    android:layout_width="match_parent"
+                    android:layout_height="340dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    app:line_color="#EB0808"
+                    app:line_speed="4"
+                    app:line_width="2"
+                    app:square_height="320"
+                    app:square_width="400"
+                    android:visibility="visible"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

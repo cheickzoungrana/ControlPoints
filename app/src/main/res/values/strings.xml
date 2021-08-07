@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Control Points</string>
+
+    <string name="prompt_login">Login</string>
+    <string name="prompt_pwd">Password</string>
+    <string name="login">Log in</string>
+</resources>
